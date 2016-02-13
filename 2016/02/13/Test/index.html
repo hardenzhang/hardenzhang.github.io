@@ -3,17 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hardenzhang的博客</title>
+  <title>第二章 变量和基本类型 | hardenzhang的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="WXG开放平台基础部的码农一枚">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hardenzhang的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="第二章的重点是 顶层const和底层const，以及与auto，decltype的联系
+char可以是signed char，也可以是unsigned char，取决于编译器表达式中不要混着用signed和unsigned，不然会出问题的
+补码  = 负数 + 无符号数的模
+浮点数运算用double
+十进制字面值为int，long，long long中尺寸最小的一个八，十六进制为int，unsig">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第二章 变量和基本类型">
+<meta property="og:url" content="http://yoursite.com/2016/02/13/Test/index.html">
 <meta property="og:site_name" content="hardenzhang的博客">
-<meta property="og:description" content="WXG开放平台基础部的码农一枚">
+<meta property="og:description" content="第二章的重点是 顶层const和底层const，以及与auto，decltype的联系
+char可以是signed char，也可以是unsigned char，取决于编译器表达式中不要混着用signed和unsigned，不然会出问题的
+补码  = 负数 + 无符号数的模
+浮点数运算用double
+十进制字面值为int，long，long long中尺寸最小的一个八，十六进制为int，unsig">
+<meta property="og:updated_time" content="2016-02-13T06:32:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hardenzhang的博客">
-<meta name="twitter:description" content="WXG开放平台基础部的码农一枚">
+<meta name="twitter:title" content="第二章 变量和基本类型">
+<meta name="twitter:description" content="第二章的重点是 顶层const和底层const，以及与auto，decltype的联系
+char可以是signed char，也可以是unsigned char，取决于编译器表达式中不要混着用signed和unsigned，不然会出问题的
+补码  = 负数 + 无符号数的模
+浮点数运算用double
+十进制字面值为int，long，long long中尺寸最小的一个八，十六进制为int，unsig">
   
     <link rel="alternative" href="/atom.xml" title="hardenzhang的博客" type="application/atom+xml">
   
@@ -59,9 +72,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Test" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Test" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/02/13/Test/" class="article-date">
   <time datetime="2016-02-13T06:29:15.000Z" itemprop="datePublished">2016-02-13</time>
@@ -74,8 +85,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/13/Test/">第二章 变量和基本类型</a>
+    <h1 class="article-title" itemprop="name">
+      第二章 变量和基本类型
     </h1>
   
 
@@ -117,56 +128,20 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/02/13/hello-world/" class="article-date">
-  <time datetime="2016-02-13T04:35:59.000Z" itemprop="datePublished">2016-02-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/13/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2016/02/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/13/hello-world/" data-id="cikkqx1ff0001mexma0uma777" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
